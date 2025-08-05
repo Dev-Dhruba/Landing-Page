@@ -42,8 +42,12 @@ const Navbar = () => {
         ))}
       </ul>
       <div className='flex justify-between gap-5 items-center'>
-        <button className='h-10 border border-white rounded-2xl w-20 text-white font-semibold hover:text-yellow-400'>Log In</button>
-        <button className='bg-yellow-400 h-10 rounded-2xl w-20 font-semibold hover:bg-[#7669dd]'>Sign up</button>
+        <button className='h-10 border border-white rounded-2xl w-20 text-white font-semibold cursor-pointer transform transition-all duration-300 hover:text-yellow-400 hover:border-yellow-400 hover:scale-105 active:scale-95'>
+          Log In
+        </button>
+        <button className='bg-yellow-400 h-10 rounded-2xl w-20 font-semibold cursor-pointer transform transition-all duration-300 hover:bg-yellow-500 hover:scale-105 hover:shadow-lg active:scale-95'>
+          Sign up
+        </button>
       </div>
     </nav>
   )

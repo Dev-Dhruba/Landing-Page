@@ -57,21 +57,21 @@ const Feature = () => {
       <p className="text-white text-center mt-4">Various Styles, Countless Assets</p>
       <div className="mx-27 my-12 flex justify-between">
         {videos.map((video, index) => (
-          <div className="flex flex-col items-center bg-black w-100 px-5 py-7 rounded-2xl">
+          <div key={index} className="flex flex-col items-center bg-black w-100 px-5 py-7 rounded-2xl group transform transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer float-animation">
             <video
               src={video}
               autoPlay
               muted
               loop
-              className="h-63 rounded-3xl"
+              className="h-63 rounded-3xl transition-all duration-300 group-hover:shadow-lg"
             ></video>
             <p className="text-white text-center my-3 w-65">
               {text[index]}{" "}
               <span className="text-yellow-400">{spanText[index]}</span>
             </p>
-            <button className="flex items-center justify-center rounded-3xl gap-2 w-48 h-12 bg-yellow-400">
+            <button className="flex items-center justify-center rounded-3xl gap-2 w-48 h-12 bg-yellow-400 cursor-pointer font-semibold transform transition-all duration-300 hover:scale-105 hover:bg-yellow-500 hover:shadow-lg active:scale-95 group-hover:translate-y-0">
               Explore
-              <FaArrowRight />{" "}
+              <FaArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
             </button>
           </div>
         ))}
@@ -97,11 +97,11 @@ const Feature = () => {
           </div>
           
           <div className="flex justify-center mb-8">
-            <div className="relative">
+            <div className="relative group cursor-pointer transform transition-all duration-300 hover:scale-105">
               <img 
                 src="humanImage.png" 
                 alt="Real Human" 
-                className="w-200 h-125 object-cover rounded-2xl"
+                className="w-200 h-125 object-cover rounded-2xl transition-all duration-300 group-hover:shadow-2xl"
               />
             </div>
           </div>
@@ -117,18 +117,18 @@ const Feature = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {avatarVideos.map((avatar, index) => (
-              <div key={index} className="relative">
+              <div key={index} className="relative group cursor-pointer transform transition-all duration-300 hover:scale-105">
                 <video 
                   src={avatar.src} 
                   autoPlay 
                   muted 
                   loop
-                  className="w-full h-64 object-cover rounded-2xl"
+                  className="w-full h-64 object-cover rounded-2xl transition-all duration-300 group-hover:shadow-2xl"
                 />
                 <div className="mt-4">
-                  <button className="bg-yellow-400 text-black px-6 py-2 rounded-full font-semibold flex items-center gap-2 hover:bg-yellow-500 transition-colors mx-auto">
+                  <button className="bg-yellow-400 text-black px-6 py-2 rounded-full font-semibold flex items-center gap-2 cursor-pointer transform transition-all duration-300 hover:scale-105 hover:bg-yellow-500 hover:shadow-lg active:scale-95 mx-auto">
                     {avatar.buttonText}
-                    <FaArrowRight className="text-sm" />
+                    <FaArrowRight className="text-sm transition-transform duration-300 group-hover:translate-x-1" />
                   </button>
                 </div>
               </div>
@@ -150,14 +150,14 @@ const Feature = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {teamFeatures.map((feature, index) => (
-            <div key={index} className="relative">
+            <div key={index} className="relative group cursor-pointer transform transition-all duration-300 hover:scale-105">
               <video
                 src={feature.src} 
                 alt={feature.alt} 
                 autoPlay
                 loop
                 muted
-                className="w-full h-auto rounded-2xl"
+                className="w-full h-auto rounded-2xl transition-all duration-300 group-hover:shadow-2xl"
               />
             </div>
           ))}

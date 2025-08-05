@@ -32,8 +32,12 @@ const Hero = () => {
         ))}
       </div>
       <div className="flex gap-5 mt-10 w-full justify-center text-2xl">
-        <button className="bg-yellow-400 h-17 rounded-2xl w-68">Try text to video</button>
-        <button className="bg-yellow-400 h-17 rounded-2xl w-68">Start free trial</button>
+        <button className="bg-yellow-400 h-17 rounded-2xl w-68 cursor-pointer font-semibold transform transition-all duration-300 hover:scale-105 hover:bg-yellow-500 hover:shadow-lg active:scale-95 btn-glow">
+          Try text to video
+        </button>
+        <button className="bg-yellow-400 h-17 rounded-2xl w-68 cursor-pointer font-semibold transform transition-all duration-300 hover:scale-105 hover:bg-yellow-500 hover:shadow-lg active:scale-95 btn-glow">
+          Start free trial
+        </button>
       </div>
     </div>
   );

@@ -64,7 +64,7 @@ const Testimonial = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={testimonial.id}
-              className={`relative bg-white rounded-2xl p-6 shadow-lg ${
+              className={`relative bg-white rounded-2xl p-6 shadow-lg cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-2xl pulse-hover ${
                 index === 0 ? 'border-l-8 border-yellow-400' : 
                 index === 1 ? 'border-l-8 border-yellow-400' : 
                 'border-l-8 border-yellow-400'
@@ -110,9 +110,9 @@ const Testimonial = () => {
 
         {/* View More Button */}
         <div className="text-center">
-          <button className="bg-transparent border-2 border-yellow-400 text-yellow-400 px-8 py-3 rounded-full font-semibold hover:bg-yellow-400 hover:text-gray-900 transition-colors duration-300 flex items-center space-x-2 mx-auto">
+          <button className="bg-transparent border-2 border-yellow-400 text-yellow-400 px-8 py-3 rounded-full font-semibold cursor-pointer transform transition-all duration-300 hover:scale-105 hover:bg-yellow-400 hover:text-gray-900 hover:shadow-lg active:scale-95 flex items-center space-x-2 mx-auto">
             <span>View More</span>
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </button>
@@ -130,7 +130,7 @@ const Testimonial = () => {
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl p-6 border-l-8 border-yellow-400 shadow-lg max-w-md">
+            <div className="bg-white rounded-2xl p-6 border-l-8 border-yellow-400 shadow-lg max-w-md cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
               <div className="flex items-center space-x-8">
                 {/* Rating */}
                 <div className="text-center">
@@ -148,20 +148,20 @@ const Testimonial = () => {
               </div>
             </div>
 
-            <button className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-gray-900 transition-colors duration-300 flex items-center space-x-2">
+            <button className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full font-semibold cursor-pointer transform transition-all duration-300 hover:scale-105 hover:bg-white hover:text-gray-900 hover:shadow-lg active:scale-95 flex items-center space-x-2">
               <span>DOWNLOAD THE APP</span>
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </button>
           </div>
 
           <div className="flex justify-center">
-            <div className="relative">
+            <div className="relative group cursor-pointer transform transition-all duration-300 hover:scale-105">
               <img 
                 src="mockup.png" 
                 alt="EditAura Mobile App" 
-                className="w-90 h-auto"
+                className="w-90 h-auto transition-all duration-300 group-hover:shadow-2xl"
               />
             </div>
           </div>
@@ -195,7 +195,7 @@ const Testimonial = () => {
                   <img
                     src={logo.src}
                     alt={logo.alt}
-                    className="h-12 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300"
+                    className="h-12 w-auto object-contain opacity-70 cursor-pointer transform transition-all duration-300 hover:opacity-100 hover:scale-110"
                   />
                 </div>
               ))}
@@ -209,7 +209,7 @@ const Testimonial = () => {
                   <img
                     src={logo.src}
                     alt={logo.alt}
-                    className="w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300"
+                    className="w-auto object-contain opacity-70 cursor-pointer transform transition-all duration-300 hover:opacity-100 hover:scale-110"
                   />
                 </div>
               ))}
