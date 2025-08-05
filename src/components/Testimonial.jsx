@@ -1,5 +1,3 @@
-import React from "react";
-
 const Testimonial = () => {
   const testimonials = [
     {
@@ -176,16 +174,14 @@ const Testimonial = () => {
           </h3>
         </div>
 
-        {/* Trusted By Section */}
         <div className="mt-24">
           <div className="text-center mb-12">
             <h3 className="text-yellow-400 text-2xl font-semibold">Trusted By</h3>
           </div>
           
-          {/* Scrolling Logo Container */}
           <div className="overflow-hidden relative">
             <div className="flex animate-scroll">
-              {/* First set of logos */}
+
               {companyLogos.map((logo, index) => (
                 <div
                   key={`first-${index}`}
@@ -199,7 +195,6 @@ const Testimonial = () => {
                   />
                 </div>
               ))}
-              {/* Duplicate set for seamless loop */}
               {companyLogos.map((logo, index) => (
                 <div
                   key={`second-${index}`}

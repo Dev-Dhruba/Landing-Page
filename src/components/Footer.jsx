@@ -1,11 +1,9 @@
-import React from "react";
-
 const Footer = () => {
   return (
     <footer className="bg-black text-white py-16 px-8 rounded-4xl">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Follow Us Section */}
+
           <div className="space-y-6">
             <h3 className="text-lg font-semibold">Follow Us</h3>
  

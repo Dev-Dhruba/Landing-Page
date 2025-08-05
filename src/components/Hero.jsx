@@ -1,5 +1,3 @@
-import React from "react";
-
 const Hero = () => {
   const videos = [
     "03_Collaboration.mp4",
