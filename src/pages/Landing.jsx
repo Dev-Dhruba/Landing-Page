@@ -8,9 +8,19 @@ const Landing = () => {
   return (
     <>
       <Navbar/>
-      <Hero/>
-      <Feature/>
-      <Testimonial/>
+      <section id="home">
+        <Hero/>
+      </section>
+      <section id="ai-tools">
+        <Feature/>
+      </section>
+      <section id="testimonials">
+        <Testimonial/>
+      </section>
+      <section id="blogs">
+      </section>
+      <section id="pricing">
+      </section>
       <Footer/>
     </>
   )

@@ -2,7 +2,26 @@ import { useState } from 'react'
 
 const Navbar = () => {
   const [activeLink, setActiveLink] = useState("Home");
-  const links = ["Home", "AI Tools", "Testimonials", "Blogs", "Pricing"];
+  const links = [
+    { name: "Home", id: "home" },
+    { name: "AI Tools", id: "ai-tools" },
+    { name: "Testimonials", id: "testimonials" },
+    { name: "Blogs", id: "blogs" },
+    { name: "Pricing", id: "pricing" }
+  ];
+
+  const handleLinkClick = (link) => {
+    setActiveLink(link.name);
+    
+    // Smooth scroll to the section
+    const element = document.getElementById(link.id);
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
 
   return (
     <nav className='flex justify-around py-2 w-screen'>
@@ -12,13 +31,13 @@ const Navbar = () => {
           <li
             key={index}
             className={`cursor-pointer transition-colors ${
-              activeLink === link 
+              activeLink === link.name 
                 ? 'text-yellow-400' 
                 : 'hover:text-[#FFD300]'
             }`}
-            onClick={() => setActiveLink(link)}
+            onClick={() => handleLinkClick(link)}
           >
-            {link}
+            {link.name}
           </li>
         ))}
       </ul>
