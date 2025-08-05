@@ -26,8 +26,8 @@ const Testimonial = () => {
       name: "Max Alter",
       title: "Director of Audience Development,",
       company: "NBCUniversal",
-      logo: "nbcuniversal",
-      avatar: "logo3.png"
+      logo: "logo3.png",
+      avatar: "image3.png"
     }
   ];
 
